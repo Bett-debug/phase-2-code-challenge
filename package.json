@@ -3,6 +3,7 @@
   "version": "1.0.0-beta.3",
   "description": "",
   "type": "module",
+  "main": "server.js",
   "bin": {
     "json-server": "lib/bin.js"
   },
@@ -15,7 +16,8 @@
     "node": ">=18.3"
   },
   "scripts": {
-    "dev": "tsx watch src/bin.ts fixtures/db.json",
+    "start": "node server.js"
+    ,"dev": "tsx watch src/bin.ts fixtures/db.json",
     "build": "rm -rf lib && tsc",
     "test": "node --import tsx/esm --test src/*.test.ts",
     "lint": "eslint src",
@@ -30,7 +32,8 @@
     "url": "git+https://github.com/typicode/json-server.git"
   },
   "devDependencies": {
-    "@eslint/js": "^9.11.0",
+    "json-server": "^0.17.0"
+    ,"@eslint/js": "^9.11.0",
     "@sindresorhus/tsconfig": "^6.0.0",
     "@tailwindcss/typography": "^0.5.15",
     "@types/node": "^22.5.5",
